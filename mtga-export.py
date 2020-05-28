@@ -2,7 +2,7 @@
 """Export your card collection from MTG: Arena
     Notes:
         Card Collection - PlayerInventory.GetPlayerCardsV3
-        Log File in windows - "%AppData%\\LocalLow\\Wizards Of The Coast\\MTGA\\output_log.txt"
+        Log File in windows - "%AppData%\\LocalLow\\Wizards Of The Coast\\MTGA\\Player.log"
 """
 from __future__ import print_function
 import logging
@@ -60,7 +60,7 @@ def get_argparse_parser():
     """
     parser = argparse.ArgumentParser(description="Parse MTGA log file")
     parser.add_argument('-v', '--version', action='version', version='%(prog)s ' + __version__)
-    parser.add_argument("-l", "--log_file", help="MTGA/Unity log file [Win: %%AppData%%\\LocalLow\\Wizards Of The Coast\\MTGA\\output_log.txt]", nargs=1)
+    parser.add_argument("-l", "--log_file", help="MTGA/Unity log file [Win: %%AppData%%\\LocalLow\\Wizards Of The Coast\\MTGA\\Player.log]", nargs=1)
     parser.add_argument("-k", "--keyword", help="List json under keyword", nargs=1)
     parser.add_argument("--collids", help="List collection ids", action="store_true")
     parser.add_argument("-c", "--collection", help="List collection with card data", action="store_true")
